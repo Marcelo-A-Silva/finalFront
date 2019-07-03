@@ -1,3 +1,4 @@
+import { ConfirmationService } from 'primeng/api';
 import { ProfessorCadastroComponent } from './professor/professor-cadastro/professor-cadastro.component';
 import { ProfessorPesquisaComponent } from './professor/professor-pesquisa/professor-pesquisa.component';
 import { AlunoCadastroComponent } from './aluno/aluno-cadastro/aluno-cadastro.component';
@@ -11,20 +12,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ConfirmationService } from 'primeng/api';
 
 
 import {Routes, RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 
+
 const rotas: Routes = [
   {path: 'disciplinas', component: DisciplinaPesquisaComponent},
   {path: 'disciplinas/novo', component: DisciplinaCadastroComponent},
-  {path: 'disciplinas/:id', component: DisciplinaCadastroComponent}
+  {path: 'disciplinas/:id', component: DisciplinaCadastroComponent},
 
   {path: 'alunos', component: AlunoPesquisaComponent},
   {path: 'alunos/novo', component: AlunoCadastroComponent},
-  {path: 'alunos/:id', component: AlunoCadastroComponent}
+  {path: 'alunos/:id', component: AlunoCadastroComponent},
 
   {path: 'professores', component: ProfessorPesquisaComponent},
   {path: 'professores/novo', component: ProfessorCadastroComponent},
@@ -42,7 +43,7 @@ const rotas: Routes = [
     DisciplinaModule,
     HttpClientModule,
     ProfessorModule,
-    AlunoModule
+    AlunoModule,
     RouterModule.forRoot(rotas)
   ],
   providers: [

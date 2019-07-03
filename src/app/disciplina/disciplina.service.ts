@@ -1,6 +1,6 @@
+import { Disciplina } from './../disciplina/disciplina-pesquisa/model';
 import { Injectable } from '@angular/core';
-import { HttpClient } from 'selenium-webdriver/http';
-
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
